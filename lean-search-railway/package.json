@@ -1,0 +1,25 @@
+{
+  "name": "lean-search",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "description": "Self-hosted natural-language Mathlib search: Gemini embeddings-2 + Chroma Cloud + GPT-5.5 rerank",
+  "type": "module",
+  "main": "dist/src/main.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/src/main.js",
+    "ingest": "tsc && node dist/ingest.js",
+    "eval": "tsc && node dist/eval.js"
+  },
+  "dependencies": {
+    "chromadb": "^3.1.5"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.7.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

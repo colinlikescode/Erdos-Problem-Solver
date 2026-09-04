@@ -1,0 +1,40 @@
+# secrets, never commit
+.env
+.env.*
+!.env.example
+tokens.txt
+*.pem
+*.key
+auth.json
+
+# === Node / TS build ===
+node_modules/
+dist/
+dist-electron/
+out/
+.next/
+*.tsbuildinfo
+
+# === Python ===
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# === Rust ===
+target/
+
+# === Lean ===
+.lake/
+lake-packages/
+build/
+
+# === OS / editor ===
+.DS_Store
+*.log
+
+# === Local run state (not source) ===
+/tmp/
+
+# Archived research runs (live in R2, not source)
+/old/

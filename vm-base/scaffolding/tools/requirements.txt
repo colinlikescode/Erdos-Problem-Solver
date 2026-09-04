@@ -1,0 +1,17 @@
+# Common math tools for quick exploration and cross-validation ONLY.
+# The real work lives in Rust / CUDA / Lean (see ../AGENTS.md §2, §6).
+# This is just a fast-start baseline - the VM has full internet, so the agent
+# installs anything else it needs on the fly (pip install / cargo add / apt-get).
+numpy
+scipy
+sympy
+galois
+networkx
+# Solvers / optimization the agent commonly reaches for.
+pulp
+ortools
+z3-solver
+python-sat
+cvxpy
+pandas
+matplotlib

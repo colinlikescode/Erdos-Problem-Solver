@@ -1,0 +1,15 @@
+[package]
+name = "experiment"
+version = "0.1.0"
+edition = "2021"
+description = "CPU search / construction for the problem in problem.md (snapshot root)"
+
+# Add dependencies as your approach needs them (e.g. rayon for parallel search,
+# ndarray for matrices, serde for candidate I/O). Keep the answer checker
+# independent and minimal - see check_answer/ and AGENTS.md §4 at the snapshot root.
+[dependencies]
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1

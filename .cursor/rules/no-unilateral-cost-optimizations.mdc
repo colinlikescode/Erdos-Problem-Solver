@@ -1,0 +1,18 @@
+---
+description: Never trade quality for cost without asking the operator first
+alwaysApply: true
+---
+
+# No unilateral cost optimizations
+
+Never make a cost-saving decision that reduces quality, capability, or fidelity
+without asking the operator first. This includes (but is not limited to):
+
+- Truncating embedding dimensions, quantizing vectors, or shrinking indexes
+- Picking a smaller/cheaper model, lower reasoning effort, or fewer candidates
+- Reducing storage, retention, sampling rates, or corpus coverage
+- Downsizing compute (VM sizes, GPU counts, sandbox counts, concurrency)
+
+Default to the highest-quality option. If cost is a genuine concern, present the
+trade-off and let the operator decide - do not decide for them. Saving money is not an
+achievement here; capability is.

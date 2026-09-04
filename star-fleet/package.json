@@ -1,0 +1,44 @@
+{
+  "name": "tabs",
+  "productName": "Star Fleet",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "description": "Star Fleet - self-driving research VMs streamed over SSH",
+  "main": "dist-electron/src/electron/main.js",
+  "scripts": {
+    "dev": "bun run build:electron && concurrently -k \"next dev -p 3210\" \"electron .\"",
+    "build:electron": "tsc -p tsconfig.electron.json",
+    "build:renderer": "next build",
+    "build": "bun run build:renderer && bun run build:electron",
+    "start": "electron .",
+    "typecheck": "tsc --noEmit && tsc -p tsconfig.electron.json --noEmit",
+    "test": "bun test tests/unit",
+    "test:live": "bash tests/integration/live.sh"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.1081.0",
+    "@aws-sdk/s3-request-presigner": "^3.1081.0",
+    "@monaco-editor/react": "^4.7.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^1.23.0",
+    "monaco-editor": "^0.55.1",
+    "next": "^16.2.10",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "ssh2": "^1.17.0",
+    "tailwind-merge": "^3.6.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.2",
+    "@types/node": "^26.1.0",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@types/ssh2": "^1.15.5",
+    "concurrently": "^10.0.3",
+    "electron": "^43.0.0",
+    "postcss": "^8.5.16",
+    "tailwindcss": "^4.3.2",
+    "typescript": "^6.0.3"
+  }
+}

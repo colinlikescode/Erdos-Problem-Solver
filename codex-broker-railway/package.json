@@ -1,0 +1,21 @@
+{
+  "name": "codex-broker",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "description": "Refresh-and-vend broker for a pool of ChatGPT Codex OAuth accounts",
+  "type": "module",
+  "main": "dist/src/main.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/src/main.js",
+    "push-account": "tsc && node dist/push-account.js"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "typescript": "^5.7.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
